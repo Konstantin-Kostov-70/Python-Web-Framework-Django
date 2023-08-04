@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+    <link href="{% static 'index.css' %}" rel="stylesheet">
+</head>
+<body>
+    <h2 class="details">Student Details</h2>
+    <h3><span>First name:</span> {{ student.first_name }}</h3>
+    <h3><span>Last name:</span> {{ student.last_name }}</h3>
+    <h3><span>Age:</span> {{ student.age }}</h3>
+    <h3><span>Biography:</span> {{ student.biography }}</h3>
+    <h3><span>Level:</span> {{ student.level }}</h3>
+    <h3><span>Email:</span> {{ student.email }}</h3>
+    <h3><span>University:</span> {{ university }}</h3>
+</body>
+</html>

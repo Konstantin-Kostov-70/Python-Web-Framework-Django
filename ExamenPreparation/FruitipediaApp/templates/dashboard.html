@@ -1,0 +1,58 @@
+{% load custom_filters %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=\, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/static/styles/styles.css"/>
+    <title>Fruitipedia</title>
+</head>
+<body>
+<div id="wrapper">
+    <header>
+        <!-- Navigation -->
+        <a id="logo" href="{% url 'index' %}">
+            <img id="logo-img" src="/static/images/logo.png" alt="logo"/>
+        </a>
+        {% include 'nav.html' %}
+    </header>
+
+    <main>
+
+        <!-- Dashboard Page -->
+        {% if all_fruits %}
+        <h2>Fruits</h2>
+        <section id="dashboard">
+            <!-- Display a div "fruit" with information about each post (if any)-->
+           {% for fruit in all_fruits %}
+            <!-- first fruit -->
+            <div class="fruit">
+                <!-- fruit image -->
+                <img src="{{ fruit.image }}"/>
+                <!-- fruit name -->
+                <h3 class="title">{{ fruit.name }}</h3>
+                <!-- fruit description -->
+                <p class="description">{{ fruit.description | truncate_chars:50 }}</p>
+                <!-- fruit details button -->
+                <a class="details-btn" href="{% url 'fruit-details' fruit.pk %}">More Info</a>
+            </div>
+            {% endfor %}
+
+
+
+        </section>
+         {% else %}
+        <!-- Display a heading if there are no posts -->
+        <h2>No fruit info yet.</h2>
+        {% endif %}
+
+    </main>
+</div>
+<!-- footer -->
+<footer>
+    <p>@Fruitipedia - SoftUni Team 2023. All rights reserved.</p>
+</footer>
+</body>
+</html>

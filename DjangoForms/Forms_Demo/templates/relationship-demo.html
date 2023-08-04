@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}
+    <title>RelationDemo</title>
+{% endblock %}
+
+{% block content %}
+     <h1>Relationship Demo with Many to many relationship</h1>
+    <div>
+        <h3>Student is <span>{{ student }}</span> with id
+            <span>{{ student.id }}</span> in table <span>student</span> in Data Base</h3>
+        <h3>This student have relationship with university
+            <span>{{ university }}</span> with id <span>{{ university.id }}</span> in table
+            <span>university</span> in Data Base</h3>
+    </div>
+    <div>
+        <h3 class="query"><span>student.university.all()</span>
+            "we use <span>.university</span> because student have <span>university</span> field"</h3>
+        <h3 class="query">queryset is : <span>QuerySet [University: SoftUni>]>"</span></h3>
+    </div>
+    <div>
+        <h3 class="query"><span>university.student_set.all()</span> "university have
+            not <span>student</span> field and use <span>student_set"</span></h3>
+        <h3 class="query">queryset is :
+            <span>QuerySet [Student: Konstantin Kostov>, Student: Stamat>, Student: Ficus>]></span></h3>
+    </div>
+    <h2>This is relation student to university and reverse</h2>
+    <div>
+        <h3><span>related_student = university.student_set.get(pk=2)</span> result is
+            <span>{{ related_student }}</span></h3>
+        <h3><span>related_university = student.university.get(pk=1)</span> result is
+            <span>{{ related_university }}</span></h3>
+    </div>
+    <p></p>
+
+{% endblock %}

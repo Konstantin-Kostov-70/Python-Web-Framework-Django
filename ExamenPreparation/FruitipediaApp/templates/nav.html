@@ -1,0 +1,18 @@
+        <nav>
+
+            <!-- If there is a user profile -->
+            {% if profile %}
+            <div class="user">
+                <a href="{% url 'dashboard' %}">Dashboard</a>
+                <a href="{% url 'fruit-create'%}">Add Fruit</a>
+                <a href="{% url 'profile-details'%}">Profile</a>
+            </div>
+            {% else %}
+            <!-- If user profile has NOT been created -->
+            <div class="guest">
+
+                <a href="{% url 'profile-create'%}">Create Profile</a>
+
+            </div>
+            {% endif %}
+        </nav>

@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List person</title>
+    <link href="{% static 'index.css' %}" rel="stylesheet">
+</head>
+<body>
+   <h2>List Person</h2>
+   <a href="{% url 'home' %}">Home</a>
+   {% for person in all_persons %}
+   <div>
+       <p>{{ person.name }}</p>
+       <img src="/media/{{ person.profile_image }}" alt="img">
+   </div>
+   {% endfor %}
+</body>
+</html>

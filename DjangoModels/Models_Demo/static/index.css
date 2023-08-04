@@ -1,0 +1,15 @@
+body {
+    background-color: antiquewhite;
+    text-align: center;
+    font-family: Verdana, sans-serif;
+}
+li {
+   list-style-type: none;
+}
+.students {
+    display: flex;
+    justify-content: space-around;
+}
+.details, span{
+    color: brown;
+}

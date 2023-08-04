@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Session</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="central-card">
+        <h2>Session page</h2>
+        <p>In this page we tested  how work session</p>
+         <h4> This is last random number: <span class="first value">{{ value }}</span></h4>
+        <h4> This is last three random number:
+            <span class="first value">{{ num1 }}</span>,
+            <span class="value">{{ num2 }}</span>,
+            <span class="value">{{ num3 }}</span>
+        </h4>
+        <div>
+            <button><a href="{% url 'index' %}">Index</a></button>
+            <button class="btn-refresh"><a href="{% url 'session' %}">Refresh</a></button>
+        </div>
+    </div>
+</body>
+</html>

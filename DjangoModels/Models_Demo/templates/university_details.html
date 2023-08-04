@@ -1,0 +1,14 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>University</title>
+    <link href="{% static 'index.css' %}" rel="stylesheet">
+</head>
+<body>
+     <h4>Name: {{ university.name }}</h4>
+     <h4>Id: {{ university.id }}</h4>
+     <h4>Slug: {{ university.slug }}</h4>
+</body>
+</html>

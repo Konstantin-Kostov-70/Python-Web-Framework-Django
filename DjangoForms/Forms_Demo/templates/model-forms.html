@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}
+    <title>ModelForm</title>
+{% endblock %}
+{% block content %}
+   <h2>Model Forms</h2>
+    <a href="{% url 'home' %}">Home</a>
+    <form action="{% url 'model-forms' %}" method="post">
+       {{ form }}
+        {% csrf_token %}
+       <button>Create</button>
+    </form>
+    {% if name %}
+    <h2>{{ name }} in {{ age }}age will study in {{ universities }} university</h2>
+    {% endif %}
+{% endblock %}

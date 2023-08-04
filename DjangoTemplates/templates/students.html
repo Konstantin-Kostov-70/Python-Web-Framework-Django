@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load filters %}
+
+   {% block title %}
+   <title>Students</title>
+   {% endblock %}
+
+    {% block page_content %}
+     <main>
+         {% if students %}
+            <p>Students</p>
+            <p>{{ students|join:', ' }}</p>
+         {% endif %}
+     </main>
+     {% endblock %}

@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <link href="{% static 'index.css'%}" rel="stylesheet">
+</head>
+<body>
+   <div class="auth">
+   <h2>Authentication</h2>
+   <h3>Index page</h3>
+   <h4>All users</h4>
+   <ol>
+       {% for new_user in users %}
+           {% if new_user == request.user %}
+              <li class="is">
+                 {{ new_user }}
+              </li>
+           {% else %}
+            <li>
+                 {{ new_user }}
+              </li>
+           {% endif %}
+       {% endfor %}
+   </ol>
+   </div>
+   <button class="btn-cbv"><a href="{% url 'sign-up' %}">Sign up CBV</a></button>
+   <button class="btn-fbv"><a href="{% url 'sign-up-form' %}">Sign up FBV</a></button>
+   {% if not user.is_authenticated %}
+       <button><a href="{% url 'sign-in-form' %}">Sign in</a></button>
+   {% else %}
+       <button><a href="{% url 'sign-out' %}">Log out</a></button>
+   {% endif %}
+   {% if request.user.is_authenticated %}
+       <h4 class="user">  {{ user }} is authenticated</h4>
+   {% endif %}
+</body>
+</html>

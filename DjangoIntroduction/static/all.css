@@ -1,0 +1,25 @@
+body {
+    text-align: center;
+    background-color: aliceblue;
+    color: blue;
+    font-family: "Verdana", serif;
+}
+
+a {
+    text-decoration: none;
+    color: brown;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 10px;
+    color: black;
+    font-weight: bolder;
+}
+
+h1 {
+    font-size: xx-large;
+    font-weight: bolder;
+}

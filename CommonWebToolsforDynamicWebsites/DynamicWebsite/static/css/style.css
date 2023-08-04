@@ -1,0 +1,65 @@
+body {
+    background-image: url("https://media.istockphoto.com/id/1139678803/vector/horizontal-vector-illustration-of-an-empty-sky-blue-coloured-grungy-textured-background.jpg?s=612x612&w=0&k=20&c=tFTrwphz8pXtrmJGrEFBAnk9anQmRPHp3C8a3kQql7M=");
+    background-color: aliceblue;
+    background-size: cover;
+    font-family: "Baskerville Old Face", sans-serif;
+    color: #2c2b2b;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: xx-large;
+}
+
+h4 {
+   font-size: larger;
+}
+.value {
+    padding: 6px;
+    color: crimson;
+    border: 2px solid crimson;
+    border-radius: 50%;
+
+    box-shadow: 5px 5px 3px #83c3fc;
+}
+
+.first.value {
+    background-color: #c9e5fd;
+}
+
+a {
+    text-decoration: none;
+    color: #2c2b2b;
+}
+
+button {
+    padding: 10px 15px;
+    border-radius: 6px;
+    background-color: #c7e3fc;
+    border: unset;
+    box-shadow: 5px 5px 8px #83c3fc;
+    width: 100px;
+    font-family: "Baskerville Old Face", sans-serif;
+    font-weight: bold;
+}
+.btn-refresh {
+    margin-left: 20px;
+}
+
+.central-card {
+    /*border: 1px solid #83c3fc;*/
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23), 0 0 5px #aaa inset;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(6, 126, 232, 0.04);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+}

@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="central-card">
+        <h2>Index page</h2>
+        <p>In this page we tested  how work cache</p>
+        <p>We can refresh after 15 seconds</p>
+        <h4> This is random number: <span class="value">{{ value }}</span></h4>
+        <div>
+            <button><a href="{% url 'session' %}">Session</a></button>
+            <button class="btn-refresh"><a href="{% url 'index' %}">Refresh</a></button>
+        </div>
+    </div>
+</body>
+</html>

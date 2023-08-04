@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Person</title>
+    <link href="{% static 'index.css' %}" rel="stylesheet">
+</head>
+<body>
+  <h2>Person Model Form</h2>
+  <a href="{% url 'home' %}">Home</a>
+  <form action="{% url 'person' %}" method="post" enctype="multipart/form-data">
+      {{ form }}
+      {% csrf_token %}
+      <button>Create</button>
+  </form>
+</body>
+</html>

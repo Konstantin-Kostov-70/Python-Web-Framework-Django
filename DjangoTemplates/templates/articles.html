@@ -1,0 +1,16 @@
+<div>
+    {% if articles %}
+        {% for article in articles %}
+            <h5>
+                {{ article.title }}
+            </h5>
+            <h5>
+                {{ article.price }}$
+            </h5>
+            <h3>-----------------------------------------------------</h3>
+        {% endfor %}
+    {% else %}
+        <h2>No Articles</h2>
+    {% endif %}
+
+</div>

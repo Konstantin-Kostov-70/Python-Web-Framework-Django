@@ -1,0 +1,37 @@
+body {
+    background-color: antiquewhite;
+    color: brown;
+    text-align: center;
+    font-family: Verdana, sans-serif;
+    font-weight: bolder;
+    font-size: x-large;
+}
+a{
+    text-decoration: none;
+    margin-right: 20px;
+    color: darkmagenta;
+}
+
+a:hover {
+    color: red;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+}
+
+.courses {
+    flex-direction: column;
+    color: blue;
+    position: relative;
+    top: -20px;
+}
+
+nav {
+    border-bottom: brown 2px solid;
+}
+
+li {
+    list-style: none;
+}

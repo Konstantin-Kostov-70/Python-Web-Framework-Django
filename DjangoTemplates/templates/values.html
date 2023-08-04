@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load filters %}
+
+    {% block title %}
+    <title>Values</title>
+   {% endblock %}
+    {% block page_content %}
+    <main>
+        <h2>Values</h2>
+        <p>Origin values: {{ values|join:', ' }}</p>
+        <p>Odd values: {{ values|odd|join:', ' }}</p>
+    </main>
+    {% endblock %}

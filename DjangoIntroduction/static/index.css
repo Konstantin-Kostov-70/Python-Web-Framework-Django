@@ -1,0 +1,19 @@
+body {
+    background-color: aliceblue;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: brown;
+    font-size: larger;
+    font-family: "Verdana", serif;
+    font-weight: bolder;
+}
+
+.title {
+    color: blue;
+    font-size: xx-large;
+    font-family: "Verdana", serif;
+    font-weight: bolder;
+}

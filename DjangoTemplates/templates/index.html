@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load filters %}
+
+   {% block title %}
+   <title>index</title>
+   {% endblock %}
+
+   {% block page_content %}
+    <main>
+        <p>{{ title }}</p>
+        <span>{{ date }}</span>
+    </main>
+       {% include 'partials.html' %}
+    {% endblock %}
+

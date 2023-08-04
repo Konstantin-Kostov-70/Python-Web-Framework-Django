@@ -1,0 +1,19 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+</head>
+<body>
+    <h2>This is form created with <span class="cbv">CBV</span></h2>
+   <form method="post" action="{% url 'sign-up' %}">
+       {{ form.as_p }}
+       {% csrf_token %}
+       <button>Create</button>
+   </form>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link href="{% static 'index.css' %}" rel="stylesheet">
+</head>
+<body>
+    <h1>This is home page</h1>
+    <div class="students">
+        <section>
+            <h3>All students:</h3>
+            {% for student in all_students %}
+            <ul>
+                <li>Name: {{student.fullname  }}</li>
+                <li>Level: {{ student.level }}</li>
+                <li>Age: {{student.age  }}</li>
+                <li>University: {{ student.university }}</li>
+            </ul>
+            <a href="{% url 'delete'  pk=student.pk %}">Delete</a>
+            <a href="{% url 'details'  pk=student.pk  %}">Details</a>
+            {% endfor %}
+        </section>
+        <section>
+            <h3>Filtered students:</h3>
+            {% for student in filtered_students %}
+            <ul>
+                <li>Name: {{student.fullname  }}</li>
+                <li>Level: {{ student.level }}</li>
+                <li>Age: {{student.age  }}</li>
+                <li>University: {{ student.university }}</li>
+               </ul>
+            {% endfor %}
+        </section>
+    </div>
+    <div>
+        <ul>
+            {% for uni in all_universities %}
+                <li>{{ uni }}</li>
+                <a href="{% url 'uni-details' pk=uni.pk slug=uni.slug %}">Details</a>
+            {% endfor %}
+        </ul>
+    </div>
+    <div>
+        <h4>{{ get_university }}</h4>
+    </div>
+
+</body>
+</html>
