@@ -32,13 +32,14 @@ a {
     color: #2c2b2b;
 }
 
-button {
+.button {
     padding: 10px 15px;
     border-radius: 6px;
     background-color: #c7e3fc;
     border: unset;
     box-shadow: 5px 5px 8px #83c3fc;
     width: 100px;
+    height: 50px;
     font-family: "Baskerville Old Face", sans-serif;
     font-weight: bold;
 }

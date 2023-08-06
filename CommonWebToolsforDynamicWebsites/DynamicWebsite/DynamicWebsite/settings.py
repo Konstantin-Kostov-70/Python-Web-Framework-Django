@@ -26,7 +26,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'DynamicWebsite.web'
+    'DynamicWebsite.web',
+    'DynamicWebsite.buyers',
+    'DynamicWebsite.cars',
+    'DynamicWebsite.orders',
+    'DynamicWebsite.sales',
 ]
 
 MIDDLEWARE = [
