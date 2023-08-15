@@ -1,0 +1,17 @@
+  <header>
+        <!-- Navigation Bar -->
+        <h1><a class="index-navigation" href="{% url 'home' %}">MyPlants</a></h1>
+        <nav>
+            <!-- if the user has not created a profile -->
+            {% if not profile %}
+                <a href="{% url 'profile-create' %}">Create Profile</a>
+
+            <!-- if the user has created a profile -->
+            {% else %}
+                <a href="{% url 'catalog' %}">Catalogue</a>
+                <a href="{% url 'plant-create' %}">Create Plant</a>
+                <a href="{% url 'profile-details' %}">Profile</a>
+            {% endif %}
+        </nav>
+  </header>
+

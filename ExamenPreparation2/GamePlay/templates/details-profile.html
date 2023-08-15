@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles/style.css">
+    <title>GamesPlay</title>
+</head>
+
+<body>
+<div id="box">
+    {% include 'nav.html' %}
+
+    <!-- profile details section -->
+    <section id="game-details">
+        <h1>Profile Details</h1>
+        <div class="info-section">
+            <div class="game-header">
+                <!-- default profile image (if the user does NOT have any)-->
+                {% if not profile.image %}
+                <img class="game-img" src="/static/images/default-user.jpg" alt='profile-image'/>
+                <!-- if the user has a profile image -->
+                {% else %}
+                <img class="game-img" src="{{ profile.image }}" alt='profile-image'/>
+                {% endif %}
+                <!-- user full name (if any) -->
+                <h1>{{ profile.get_full_name }}</h1>
+                <!-- user email -->
+                <p class="text">Email: {{ profile.email }}</p>
+                <!-- user age -->
+                <p class="text">Age: {{ profile.age }}</p>
+                <!-- total number of games -->
+                <p class="text">Total games: {{ all_games.count }}</p>
+                <!-- average rating for all games -->
+                {% if all_games %}
+                <p class="text">Average rating: {{ average }}</p>
+                {% else %}
+                 <p class="text">Average rating: 0.0</p>
+                {% endif %}
+                <!-- Edit/Delete buttons -->
+                <div class="buttons">
+                    <a href="{% url 'profile-edit' %}" class="button">Edit</a>
+                    <a href="{% url 'profile-delete' %}" class="button">Delete</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        &copy;SoftUni Team 2022. All rights reserved.
+    </footer>
+</div>
+</body>
+</html>
